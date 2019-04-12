@@ -11,19 +11,23 @@
         android:layout_width="275dp"
         android:layout_height="178dp"
         android:layout_marginStart="68dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="68dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/slide_name" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:gravity="center_horizontal"
         android:id="@+id/slide_name"
         android:layout_width="273dp"
         android:layout_height="49dp"
-        android:textSize="24sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="224dp"
+        android:gravity="left"
+        android:textColor="#000000"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,11 +35,15 @@
         android:id="@+id/slide_description"
         android:layout_width="match_parent"
         android:layout_height="571dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/slide_image" />
+        app:layout_constraintTop_toBottomOf="@+id/slide_name"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

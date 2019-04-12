@@ -9,30 +9,33 @@
         android:id="@+id/nameText"
         android:layout_width="141dp"
         android:layout_height="29dp"
-        android:gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
         android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/ImageItem"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ImageItem"
         android:layout_width="108dp"
         android:layout_height="98dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/descriptionText"
-        android:layout_width="246dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="206dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:gravity="top"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/ImageItem"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
 </android.support.constraint.ConstraintLayout>

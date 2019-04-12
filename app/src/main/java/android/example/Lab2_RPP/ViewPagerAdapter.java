@@ -1,6 +1,7 @@
-package android.example.laboratorynumber2;
+package android.example.Lab2_RPP;
 
 import android.content.Context;
+import android.example.Lab2_RPP.R;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.PagerAdapter;
@@ -15,15 +16,15 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class MyViewPagerAdapter extends PagerAdapter {
+public class ViewPagerAdapter extends PagerAdapter {
     private ImageView Image;
-    private TextView name;
-    private TextView description;
+    private TextView Name;
+    private TextView Description;
 
     private Context context;
-    private ArrayList<Civilisation> arrayList;
+    private ArrayList<Element> arrayList;
 
-    public MyViewPagerAdapter(ArrayList<Civilisation> arrayList, Context context1) {
+    public ViewPagerAdapter(ArrayList<Element> arrayList, Context context1) {
         this.arrayList = arrayList;
         this.context = context1;
     }
@@ -38,14 +39,14 @@ public class MyViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         LayoutInflater lInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = lInflater.inflate(R.layout.slide, container, false);
+        View view = lInflater.inflate(R.layout.view_page, container, false);
         LinearLayout layoutSlide = (LinearLayout) view.findViewById(R.id.viewPager);
         Image = view.findViewById(R.id.slide_image);
-        name=view.findViewById(R.id.slide_name);
-        description = view.findViewById(R.id.slide_description);
-        Civilisation object = arrayList.get(position);
-        description.setText(object.getDescription());
-        name.setText(object.getName());
+        Name=view.findViewById(R.id.slide_name);
+        Description = view.findViewById(R.id.slide_description);
+        Element object = arrayList.get(position);
+        Description.setText(object.getDescription());
+        Name.setText(object.getName());
         Glide
                 .with(context)
                 .load(object.getImage())

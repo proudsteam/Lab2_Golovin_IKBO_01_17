@@ -1,6 +1,7 @@
-package android.example.laboratorynumber2;
+package android.example.Lab2_RPP;
 
 import android.content.Context;
+import android.example.Lab2_RPP.R;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,10 +16,10 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecyclerHeader> {
 
-  private ArrayList <Civilisation> arrayList;
+  private ArrayList <Element> arrayList;
   private Context context;
 
-    public RecyclerAdapter(ArrayList<Civilisation> arrayList, Context context1) {
+    public RecyclerAdapter(ArrayList<Element> arrayList, Context context1) {
         this.arrayList = arrayList;
         this.context = context1;
     }
@@ -26,23 +27,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     @NonNull
     @Override
     public RecyclerAdapter.RecyclerHeader onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item,viewGroup,false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item,viewGroup,false);
         return new RecyclerHeader(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.RecyclerHeader recyclerHeader, int i) {
-        Civilisation object = arrayList.get(i);
+        Element object = arrayList.get(i);
         recyclerHeader.descriptionOfTechnology.setText(object.getDescription());
         recyclerHeader.nameOfTechnology.setText(object.getName());
         Glide
                 .with(context)
                 .load(object.getImage())
                 .into(recyclerHeader.Image);
-
-
-
-
     }
 
     @Override

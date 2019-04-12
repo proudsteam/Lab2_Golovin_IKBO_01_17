@@ -1,4 +1,4 @@
-package android.example.laboratorynumber2;
+package android.example.Lab2_RPP;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

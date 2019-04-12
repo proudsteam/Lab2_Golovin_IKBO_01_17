@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="android.example.laboratorynumber2">
+    package="android.example.Lab2_RPP">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name="android.example.Lab2_RPP.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,8 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewPageActivity1" />
-        <activity android:name=".MainActivity">
+        <activity android:name="android.example.Lab2_RPP.ViewPageActivity" />
+        <activity android:name="android.example.Lab2_RPP.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,27 +1,26 @@
-package android.example.laboratorynumber2;
+package android.example.Lab2_RPP;
 
 import android.content.Context;
+import android.example.Lab2_RPP.R;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 public class ListAdapter extends BaseAdapter {
-    private ArrayList<Civilisation> arrayList;
+    private ArrayList<Element> arrayList;
     private Context context;
     ImageView Image;
-    TextView nameOfTechnology;
-    TextView descriptionOfTechnology;
+    TextView NameOfTechnology;
+    TextView DescriptionOfTechnology;
 
-    public ListAdapter(ArrayList<Civilisation> arrayList, Context context) {
+    public ListAdapter(ArrayList<Element> arrayList, Context context) {
         this.arrayList = arrayList;
         this.context = context;
 
@@ -47,16 +46,16 @@ public class ListAdapter extends BaseAdapter {
         LayoutInflater lInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View view1 = view;
+        View View = view;
         if (view == null) {
-            view = lInflater.inflate(R.layout.list_item, viewGroup, false);
+            view = lInflater.inflate(R.layout.item, viewGroup, false);
         }
         Image = view.findViewById(R.id.ImageItem);
-        nameOfTechnology=view.findViewById(R.id.nameText);
-        descriptionOfTechnology = view.findViewById(R.id.descriptionText);
-        Civilisation object = arrayList.get(i);
-        descriptionOfTechnology.setText(object.getDescription());
-        nameOfTechnology.setText(object.getName());
+        NameOfTechnology=view.findViewById(R.id.nameText);
+        DescriptionOfTechnology = view.findViewById(R.id.descriptionText);
+        Element object = arrayList.get(i);
+        DescriptionOfTechnology.setText(object.getDescription());
+        NameOfTechnology.setText(object.getName());
         Glide
                 .with(context)
                 .load(object.getImage())
